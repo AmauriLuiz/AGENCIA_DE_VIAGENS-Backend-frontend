@@ -1,0 +1,59 @@
+@model Agencia_de_Viagens_App.Models.Package
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Package</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="origin" class="control-label"></label>
+                <input asp-for="origin" class="form-control" />
+                <span asp-validation-for="origin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="kids" class="control-label"></label>
+                <input asp-for="kids" class="form-control" />
+                <span asp-validation-for="kids" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="adults" class="control-label"></label>
+                <input asp-for="adults" class="form-control" />
+                <span asp-validation-for="adults" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="payment" class="control-label"></label>
+                <input asp-for="payment" class="form-control" />
+                <span asp-validation-for="payment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateGoing" class="control-label"></label>
+                <input asp-for="dateGoing" class="form-control" />
+                <span asp-validation-for="dateGoing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateReturn" class="control-label"></label>
+                <input asp-for="dateReturn" class="form-control" />
+                <span asp-validation-for="dateReturn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

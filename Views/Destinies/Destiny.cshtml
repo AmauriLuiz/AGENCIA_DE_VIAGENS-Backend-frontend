@@ -1,0 +1,125 @@
+@model IEnumerable<Agencia_de_Viagens_App.Models.Destiny>
+
+@{
+    ViewData["Title"] = "Destinos";
+}
+
+<div class="text-center color2">
+    <h1 class="display-4">Destinos</h1>
+    
+    <form>
+      <div class="form-group">
+          <label for="inputState">Origem</label>
+          <select id="inputState">
+            <option>Acre</option>
+            <option>Alagoas</option>
+            <option>Amapá</option>
+            <option >Amazonas</option>
+            <option >Bahia</option>
+            <option >Ceará</option>
+            <option >Espírito Santo</option>
+            <option >Goiás</option>
+            <option >Maranhão</option>
+            <option >Mato Grosso do Sul</option>
+            <option >Minas Gerais</option>
+            <option >Pará</option>
+            <option >Paraíba</option>
+            <option >Paraná</option>
+            <option >Pernambuco</option>
+            <option >Piauí</option>
+            <option >Rio de Janeiro</option>
+            <option >Rio Grande do Norte</option>
+            <option >Rio Grande do Sul</option>
+            <option >Rondônia</option>
+            <option >Roraima</option>
+            <option >Santa Catarina</option>
+            <option >São Paulo</option>
+            <option >Sergipe</option>
+            <option >Tocantins</option>
+            <option >Distrito Federal</option>
+          </select>
+
+           <label for="inputDate">Data Ida</label>
+           <input id="dateGo" type="date">
+    </div>
+
+    <div class="form-group">
+          <label for="inputState">Destino</label>
+          <select id="inputState">
+            <option >Acre</option>
+            <option >Alagoas</option>
+            <option >Amapá</option>
+            <option >Amazonas</option>
+            <option >Bahia</option>
+            <option >Ceará</option>
+            <option >Espírito Santo</option>
+            <option >Goiás</option>
+            <option >Maranhão</option>
+            <option >Mato Grosso do Sul</option>
+            <option >Minas Gerais</option>
+            <option >Pará</option>
+            <option >Paraíba</option>
+            <option >Paraná</option>
+            <option >Pernambuco</option>
+            <option >Piauí</option>
+            <option >Rio de Janeiro</option>
+            <option >Rio Grande do Norte</option>
+            <option >Rio Grande do Sul</option>
+            <option >Rondônia</option>
+            <option >Roraima</option>
+            <option >Santa Catarina</option>
+            <option >São Paulo</option>
+            <option >Sergipe</option>
+            <option >Tocantins</option>
+            <option >Distrito Federal</option>
+          </select>
+
+            <label for="inputDate">Data Volta</label>
+            <input id="dateBack" type="date">
+      </div>
+
+      <div class="form-group">
+            <input type="submit" name="btnSubmit" class="btn" value="Pesquisar" />
+       </div>  
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                
+                    <div class="col">
+                    <div class="card">
+                      <img src="~/images/@(item.id).jpg"  class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">@item.title</h5>
+                        <p class="card-text"> @item.country - @item.state - @item.municipality </p>
+                        <h4 class="card-text"> Diária - R$ @item.valueDaily  </h4>
+                        <a asp-controller="Packages" asp-action="Create" class="btn">Escolher opção</a>
+                      </div>
+                    </div>
+                  </div>
+               
+            }
+        }else{               
+                    <div class="col">
+                    <div class="card">
+                      <img src="~/images/0.jpg"  class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayNameFor(model => model.title)</h5>
+                        <p class="card-text">  @Html.DisplayNameFor(model => model.country) - @Html.DisplayNameFor(model => model.state) - @Html.DisplayNameFor(model => model.municipality) </p>
+                        <h4 class="card-text"> Diária - R$  @Html.DisplayNameFor(model => model.valueDaily) </h4>
+                      </div>
+                    </div>
+                  </div>
+               
+            }
+
+
+         </div> 
+    </div>
+ </div>

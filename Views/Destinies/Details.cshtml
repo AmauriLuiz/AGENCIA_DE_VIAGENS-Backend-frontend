@@ -1,0 +1,54 @@
+@model Agencia_de_Viagens_App.Models.Destiny
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Destiny</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.country)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.municipality)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.municipality)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.valueDaily)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.valueDaily)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.promotion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.promotion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

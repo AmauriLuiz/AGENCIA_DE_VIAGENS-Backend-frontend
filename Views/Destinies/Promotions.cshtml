@@ -1,0 +1,45 @@
+@model IEnumerable<Agencia_de_Viagens_App.Models.Destiny>
+
+@{
+    ViewData["Title"] = "Promoções";
+}
+
+<figure class="figure">
+
+    <div class="container text-center">
+        <h1 class="display-4">Promoções</h1>
+        <div class="row">
+
+            @if(Model != null) 
+            {
+                 @foreach (var item in Model){
+                    @if (item.promotion)
+                    {
+                        <div class="card lg">
+                          <img src="~/images/@(item.id).jpg"  class="img-fluid" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">@item.title</h5>
+                            <p class="card-text">@item.country - @item.state - @item.municipality</p>
+                            <p class="card-text"><small class="text-muted">Diária - R$ @item.valueDaily  </small></p>
+                            <a asp-controller="Packages" asp-action="Create" class="btn">Escolher opção</a>
+                           </div>
+                        </div>
+                    }
+
+            }
+             }else{
+                 <div class="card lg">
+                      <img src="~/images/0.jpg"  class="img-fluid" alt="...">
+                      <div class="card-body">
+                       <h5 class="card-title"> @Html.DisplayNameFor(model => model.title)</h5>
+                        <p class="card-text">  @Html.DisplayNameFor(model => model.country) - @Html.DisplayNameFor(model => model.state) - @Html.DisplayNameFor(model => model.municipality) </p>
+                        <h4 class="card-text"> Diária - R$  @Html.DisplayNameFor(model => model.valueDaily) </h4>                   
+                       </div>
+                  </div>
+             }
+
+
+        </div>
+    </div>
+
+</figure>

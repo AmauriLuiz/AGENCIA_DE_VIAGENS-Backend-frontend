@@ -1,0 +1,7 @@
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.csproj.AssemblyReference.cache
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.AssemblyInfoInputs.cache
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.AssemblyInfo.cs
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.csproj.CoreCompileInputs.cache
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Amauri  Luiz\source\repos\Agencia-de-Viagens-App\Agencia-de-Viagens-App\obj\Debug\net6.0\Agencia-de-Viagens.MvcApplicationPartsAssemblyInfo.cache
