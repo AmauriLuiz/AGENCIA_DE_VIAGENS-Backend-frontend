@@ -1,0 +1,21 @@
+@model Agencia_de_Viagens_App.Models.User
+
+@{
+    ViewData["Title"] = "Recuperar senha";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Esqueceu sua senha?</h1>
+    <p>Basta digitar seu endereço de e-mail abaixo e enviaremos um link para redefinir sua senha!</p>
+
+@using (Html.BeginForm("Recovery","Página Recovery", FormMethod.Post))
+{
+    <Br />
+    @Html.Label("E-mail: ")
+    <input type="text" class="form-control" aria-describedby="email" asp-for="email">
+    <Br />
+    <Br />
+    <input type="submit" class="btn" value="Redefinir Senha" />}
+
+    <p>  <a asp-action="Login">Já tem uma conta? Conecte-se!</a> | <a asp-action="Create">Não tem conta? Cadastre-se</a></p>
+</div>

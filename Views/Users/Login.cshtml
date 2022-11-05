@@ -1,0 +1,26 @@
+@model Agencia_de_Viagens_App.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+
+    <form asp-action="\User\Login">
+        <label>
+            E-mail
+        </label>
+        <input type="email" class="form-control" aria-describedby="Email" asp-for="email" id="email" placeholder="nome@example.com.br">
+
+        <label>
+            Senha
+        </label>
+        <input type="password" class="form-control" aria-describedby="Senha" asp-for="password" id="password" placeholder="4628A4s">
+        <Br />
+        <Br />
+        <input class="btn" type="submit" value="Entrar" />
+         <Br />
+    </form>
+    <p> <a asp-action="Recovery">Esqueceu sua senha</a>  | <a asp-action="Create">Cadastre-se</a></p>
+</div>

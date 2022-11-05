@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3c27b98c-5ec3-49dd-8637-677a0e514396": {
+      "ProjectGuid": "3c27b98c-5ec3-49dd-8637-677a0e514396",
+      "DisplayName": "Agencia_de_Viagens_App",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
